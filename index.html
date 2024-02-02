@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="swiper/swiperjs.css">
+
+
+    <!--
+        search icon link
+    -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="socials-area">
+            <div>
+                <a href="#"><i class="fab fa-instagram" id="icon"></i></a>
+            </div>
+
+            <div>
+                <a href="https://github.com/GeovannaBorges"><i class="fab fa-github" id="icon"></i></a>
+            </div>
+
+            <div>
+                <a href="#"><i class="fab fa-linkedin" id="icon"></i></a>
+            </div>
+        </div>
+
+
+        <header>
+            <div class="logo">
+                ebibliotech
+            </div>
+
+            <div class="search-book-area">
+                <input type="text" class="search-input">
+                <a class="search-btn"><i class="fas fa-search"></i></a>
+            </div>
+        </header>
+
+        
+        <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" value="Romance"><h3>Romance</h3></div>
+              <div class="swiper-slide" value="Fantasia"><h3>Fantasia</h3></div>
+              <div class="swiper-slide" value="Terror"><h3>Terror</h3></div>
+              <div class="swiper-slide" value="Suspense"><h3>Suspense</h3></div>
+              <div class="swiper-slide" value="Drama"><h3>Drama</h3></div>
+              <div class="swiper-slide" value="Biografia"><h3>Biografia</h3></div>
+              <div class="swiper-slide" value="Ficção"><h3>Ficção científica</h3></div>
+              <div class="swiper-slide" value="Infantil"><h3>Infantil</h3></div>
+              <div class="swiper-slide" value="Autoajuda"><h3>Autoajuda</h3></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div> 
+
+
+        <div class="numFoundArea">
+            <h2 class="num-found"></h2>
+        </div>
+        
+        <div class="books-container">
+
+        </div>
+
+    
+    </div>
+
+    
+</body>
+
+ <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="swiper/swiper.js"></script>
+
+ <!-- Script API -->
+ <script src="api.js"></script>
+
+ <!-- teste script -->
+ <script src="teste.js"></script>
+</html>

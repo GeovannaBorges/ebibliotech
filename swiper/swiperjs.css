@@ -1,0 +1,35 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+ 
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.swiper-button-prev, .swiper-button-next {
+   color: rgb(180, 140, 200);
+}
+
