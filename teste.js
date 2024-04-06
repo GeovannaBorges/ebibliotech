@@ -4,6 +4,7 @@ const url = "https://openlibrary.org/search.json?q=";
 const coverUrl = "https://covers.openlibrary.org/b/id/";
 const div = document.querySelector(".books-container");
 
+
 const searchedBookJson = () => {
     const bookName = searchInput.value.trim();
     return bookName.length > 0 ? `${url}${bookName.split(' ').join('+')}` : url;
@@ -27,6 +28,7 @@ function fetchBooks(jsonUrl) {
             const { title, author_name, subject, publish_date, number_of_pages_median, cover_i, edition_key } = doc;
             const bookCover = `${coverUrl}${cover_i}.jpg`;
 
+            console.log(jsonUrl)
             console.log(`Título do livro: ${title}`);
             console.log(`Autor: ${author_name}`);
             console.log(`Gênero: ${subject}`);
@@ -60,7 +62,7 @@ searchBtn.addEventListener("click", () => {
     fetchBooks(searchedBookJson())
 })
 
-/* document.querySelectorAll(".swiper-slide").forEach(div => {
+document.querySelectorAll(".swiper-slide").forEach(div => {
     div.addEventListener("click", () => {
     
          const booksContainer = document.querySelector(".books-container")
@@ -72,7 +74,7 @@ searchBtn.addEventListener("click", () => {
             break;
         }
     })
-}) */
+}) 
 
 function displayBooks(numFound, bookCover, title, authorName) {
     const numFoundH2 = document.querySelector(".num-found");
@@ -91,3 +93,19 @@ function displayBooks(numFound, bookCover, title, authorName) {
 
     booksContainer.appendChild(bookDiv);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const booksContainer = document.querySelector(".books-container");
+
+    booksContainer.addEventListener("click", function(event) {
+        const overlay = document.getElementById('overlay');
+        if (event.target.classList.contains('book')) {
+            overlay.style.display = 'block';
+        }
+    });
+
+    const overlay = document.getElementById('overlay');
+    overlay.addEventListener('click', function() {
+        overlay.style.display = 'none';
+    });
+});
